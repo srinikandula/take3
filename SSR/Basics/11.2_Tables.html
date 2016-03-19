@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>11.2_Tables</title>
+		<style>
+			caption{
+				color:cyan;
+				}
+			table,tr,td,th{
+				border:1px solid black;
+				border-collapse: collapse;				
+			}
+			th{					
+					background-color:blue;
+					color:red;					
+				}
+			td{					
+					
+					color:green;
+					padding:15px;					
+				}
+			#abc{
+				width:50%;				
+				background-color:grey;
+				text-align: right;
+			}
+			#def{
+				width:50%;				
+				background-color:yellow;
+				text-align:left;
+			}
+			
+		</style>
+	</head>
+	<body>	
+		<table id="abc" align="right";>
+		<caption><b>AHU List</caption>	
+			<tr>
+				<th>S.No:</th>
+				<th>AHU Name</th>
+				<th>Id.No:</th>
+				<th>Class</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Tablets</td>
+				<td>AHU-01</td>
+				<td>1 Lakh</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Capsules</td>
+				<td>AHU-02</td>
+				<td>1 Lakh</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Liquids</td>
+				<td>AHU-03</td>
+				<td>UC</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td rowspan=2>Ointment</td>
+				<td>VSU-04</td>
+				<td>UC</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<!--<td>Liquids</td>-->
+				<td>VEU-04</td>
+				<td>UC</td>
+			</tr>
+		</table>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br>
+<br>
+<br>
+		<table id="def" align="left";>
+		<caption><b>AHU List</caption>	
+			<tr>
+				<th>S.No:</th>
+				<th>AHU Name</th>
+				<th>Id.No:</th>
+				<th>Class</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Tablets</td>
+				<td>AHU-01</td>
+				<td>1 Lakh</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Capsules</td>
+				<td>AHU-02</td>
+				<td>1 Lakh</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Liquids</td>
+				<td>AHU-03</td>
+				<td>UC</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td colspan=2> Ointment</style></td>
+				<!--<td>VSU-04</td>-->
+				<td>UC</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Liquids</td>
+				<td>VEU-04</td>
+				<td>UC</td>
+			</tr>
+		</table>
+
+	</body>
+</html>
