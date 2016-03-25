@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>signup_page</title>
+	<style>
+		body	{
+					background-color: black;
+				}
+		header	{
+					
+					color:white;
+					
+				}
+		nav		{
+					text-align:center;
+					color:white;
+					
+				}
+		aside	{
+					
+					color:white;
+					float:right;
+
+				}
+		section	{
+					
+					color:white;
+					text-align:center;
+					float: center;
+					height:400px;
+				}
+		footer	{
+					text-align: center;
+					color:white;
+					clear:both;
+				}	
+	</style>
+	</head>
+
+	<body>
+		<header>
+			<span style="font-size:30px;color:red;">MysiteMywish.com</span>
+			<form style="float:right;padding-top:10px;">
+				User Name:&nbsp<input type="text" name="user_name" size="10">&nbsp
+				Password:&nbsp<input type="password" name="password" maxlength="10" size="10">&nbsp<input type="submit" name="sign_in" value="Sign in">&nbsp<br>				
+			</form>
+		</header>
+		<nav>
+			<h1>Create Mysite Mywish account here</h1> 
+		</nav>
+		<aside>
+			<h1>Sign up</h1>
+			<form style="padding-left: 20px;line-height:30px">
+				Name:
+				<input type="text" name="first" placeholder="First" autofocus>
+				<input type="text" name="last" placeholder="Last"><br>
+				Enter e-mail adrress:<br>
+				<input type="email" name="email" placeholder="e-mail"><br>
+				Confirm your e-mail adrress:<br>
+				<input type="email" name="confirm_email" placeholder="Re-type e-mail"><br>
+				Create a password:<br>
+				<input type="password" name="password" placeholder="Password"><br>
+				Confirm your password:<br>
+				<input type="password" name="confirm_password" placeholder="Re-type Password"><br>
+				Date of Birth:<br>
+				<input type="date" name="dob"><br>
+				Gender:
+				<select name="gender">
+					<option value="I am" selected>I am....</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select><br>
+				<input type="submit" name="sign_up" value="Sign up">
+			</form>
+		</aside>
+		<section>
+			<img src="Ad_img.jpg" alt="Site_Image" style="width:400px;height:400px;" align="center" >
+
+		</section>
+		<footer>
+			<h4>Copy Rights &copy Reserved</h4>
+		</footer>
+	</body>
+</html>
