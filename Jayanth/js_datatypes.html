@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="omed"></p>
+
+<script>
+var x1 = 123;
+var x2 = 'audi';
+var x3 = "a6";
+var x4 = "ctx5";
+var x5 = 2365;
+
+document.getElementById("demo").innerHTML =
+x1 + "<br>" + 
+x2+ "<br>" + 
+x3 + "<br>" + 
+x4 + "<br>" + 
+x5;
+</script>
+<script>
+document.getElementById("omed").innerHTML =
+x1 +""+x2+""+x3 + ""+x4 +""+x5;
+</script>
+<p id="cars"></p>
+<script>
+var cars = ["audi","BMW","Mercedes"];
+document.getElementById("cars").innerHTML = cars[2];
+</script>
+
+<p id="operator"></p>
+<script>
+document.getElementById("operator").innerHTML =
+typeof "jay"+"<br>"+
+typeof 123+"<br>"+
+typeof true+"<br>"+
+typeof[1,2,3]+"<br>"+
+typeof {name:"jay", age:23}+"<br>"+
+(null === undefined) + "<br>" +
+(null == undefined);
+</script>
+
+
+
+</body>
+</html>
