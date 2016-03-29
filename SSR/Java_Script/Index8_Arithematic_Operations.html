@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index8_Arithematic_Operations</title>
+</head>
+
+<body>
+	<h1>Sum of two variables</h1>
+	<p>Sum of X and Y is stored in Z and displayed below:</p>
+	<p id="sum"></p>
+	<p>Sub of X and Y is stored in a and displayed below:</p>
+	<p id="sub"></p>
+	<p>Mul of X and Y is stored in b and displayed below:</p>
+	<p id="mul"></p>
+	<p>Div of X and Y is stored in c and displayed below:</p>
+	<p id="div"></p>
+	<p>Mod of X and Y is stored in d and displayed below:</p>
+	<p id="mod"></p>
+	<script type="text/javascript">
+		var x = 10;
+		var y = 20;
+		var z = x + y;
+		var a= x-y;
+		var b=x*y;
+		var c=x/y;
+		var d=x%y;
+		document.getElementById("sum").innerHTML=z;
+		document.getElementById("sub").innerHTML=a;
+		document.getElementById("mul").innerHTML=b;
+		document.getElementById("div").innerHTML=c;
+		document.getElementById("mod").innerHTML=d;
+	</script>
+</body>
+</html>
