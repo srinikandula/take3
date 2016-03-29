@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> image changing</h1>
+<img id="myImage" onclick="changeImage()" src="image1.jpg">
+<script>
+function changeImage(){
+	var image=document.getElementById('myImage');
+	if (image.src.match("virat")){
+		image.src="image1.jpg";
+	}
+	else{
+		image.src="image2.jpg";
+	}
+} 
+</script>
+</body>
+</html>
