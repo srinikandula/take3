@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index10_Arrays_and_Objects</title>
+</head>
+<body>
+	<h1>Here is the example to demonstrate Arrays and objects</h1>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p> Shirt costs <span id="demo4"></span> and jeans costs <span id="demo5"></span>.<br>The total cost of his dress is <span id="demo3"></span></p>
+	<script type="text/javascript">
+	var brands=["'pepe'","'Wranglers'","'Adidas'","'Nike'","'Mufti'"];
+	var details={
+					First_Name:"Sridhar Reddy",
+					Last_Name:"Syamala",
+					Street:"189 Carteret Ave",
+					Age:27
+				};
+	var shirt=100,jeans=200;
+	document.getElementById("demo1").innerHTML=
+	"Person name is " + details.First_Name + ", last name is " + details.Last_Name + " ,and he lives in " + details.Street + " ,age is " + details.Age;
+	document.getElementById("demo2").innerHTML="He brought Shirt from " + brands[4]+ " and jeans from " + brands[1];
+	document.getElementById("demo3").innerHTML=shirt+jeans;
+	document.getElementById("demo4").innerHTML=shirt;
+	document.getElementById("demo5").innerHTML=jeans;
+	</script>
+</body>
+</html>
