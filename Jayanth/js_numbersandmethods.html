@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = (0.2*5 + 0.1*5) / 56;
+    document.getElementById("demo").innerHTML =  x;
+}
+</script>
+<p id="demo1"></p>
+
+<button onclick="myfunction()">Try it</button>
+
+<script>
+function myfunction() {
+    var myNumber = 6; 
+    var txt = "";
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo1").innerHTML = txt;
+}
+</script>
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = 1000000 / "Apple";
+</script>
+<p id="demo4"></p>
+<script>
+document.getElementById("demo4").innerHTML = typeof NaN;
+</script>
+<p id="demo5"></p>
+
+<script>
+var x = 5;             
+var y = new Number(5);  
+document.getElementById("demo5").innerHTML = (x==y);
+</script>
+<p id="demo6"></p>
+
+<script>
+var x = 1.1;
+document.getElementById("demo6").innerHTML =
+    x.toExponential() + "<br>" + 
+    x.toExponential(2) + "<br>" + 
+    x.toExponential(4) + "<br>" + 
+    x.toExponential(6);
+</script>
+<p id="demo7"></p>
+
+<script>
+var x = 1.1;
+document.getElementById("demo7").innerHTML = 
+    x.toPrecision() + "<br>" +
+    x.toPrecision(2) + "<br>" +
+    x.toPrecision(4) + "<br>" +
+    x.toPrecision(6);    
+</script>
+
+<p id="demo8"></p>
+
+<script>
+document.getElementById("demo8").innerHTML = 
+    Number(true) + "<br>" +
+    Number(false) + "<br>" +
+    Number(new Date()) + "<br>" +
+    Number("  1") + "<br>" +
+    Number("1  ") + "<br>" +
+    Number("1 6");    
+</script>
+<p id="demo9"></p>
+
+<script>
+document.getElementById("demo9").innerHTML = 
+    parseInt("1") + "<br>" +
+    parseInt("1.33") + "<br>" +
+    parseInt("1 6") + "<br>" +    
+    parseInt("1 years") + "<br>" +    
+    parseInt("years 1");    
+</script>
+<p id="demo10"></p>
+
+<script>
+document.getElementById("demo10").innerHTML = 
+    parseFloat("1") + "<br>" +
+    parseFloat("1.33") + "<br>" +
+    parseFloat("1 6") + "<br>" +    
+    parseFloat("1 years") + "<br>" +
+    parseFloat("years 1");        
+</script>
+
+
+
+
+
+</body>
+</html>

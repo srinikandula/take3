@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x = new Date(98659856985);
+document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo1"></p>
+
+<script>
+var d = new Date(16,4,4,17,20,30,0);
+document.getElementById("demo1").innerHTML = d;
+</script>
+<p id="demo2"></p>
+
+<script>
+var a = new Date(16,4,4);
+document.getElementById("demo2").innerHTML = a;
+</script>
+<p> The toUTCString() method converts a date to a UTC string</p>
+<p> When you display a date object in HTML, it is automatically converted to a string, with the toString() method.</p>
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = new Date("apr 4 2016");
+</script>
+<p id="demo4"></p>
+
+<script>
+document.getElementById("demo4").innerHTML = new Date("04/04/2016");
+</script>
+<p id="demo5"></p>
+
+<script>
+document.getElementById("demo5").innerHTML = new Date("mon apr 04 2016 17:41:24 GMT+0100 (india Time)");
+</script>
+<p id="demo6"></p>
+
+<script>
+var j = new Date();
+document.getElementById("demo6").innerHTML = j.getTime();
+</script>
+<p id="demo7"></p>
+
+<script>
+var h = new Date();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+document.getElementById("demo7").innerHTML = days[h.getDay()];
+</script>
+
+
+
+</body>
+</html>

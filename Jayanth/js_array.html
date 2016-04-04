@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+var names = ["jay", "sridhar", "gayu", "raju"];
+document.getElementById("demo").innerHTML = names.length;
+</script>
+
+<p id="demo1"></p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Lemon")
+    document.getElementById("demo1").innerHTML = fruits;
+}
+</script>
+<p id="demo2"></p>
+
+<script>
+var person = [];
+person[0] = "jay";
+person[1] = "raju";
+person[2] = 23; 
+document.getElementById("demo2").innerHTML =
+person[1] + " " + person.length;
+</script>
+
+
+<p id="demo3"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo3").innerHTML = typeof fruits;
+</script>
+<p id="demo4"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo4").innerHTML = fruits.join(" + ");
+</script>
+
+<button onclick="myshift()">Try it</button>
+
+<p id="demo5"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo5").innerHTML = fruits;
+
+function myshift() {
+    fruits.shift();
+    document.getElementById("demo5").innerHTML = fruits;
+}
+</script>
+<button onclick="myfunction()">Try it</button>
+
+<p id="demo6"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo6").innerHTML = fruits;
+function myfunction() {
+    fruits.splice(3, 1, "Lemon", "Kiwi");
+    document.getElementById("demo6").innerHTML = fruits;
+}
+</script>
+<button onclick="mFunction()">Try it</button>
+
+<p id="demo7"></p>
+
+<script>
+function mFunction() {
+    var g = ["sai", "mani"];
+    var h = ["sandeep", "vamshi", "sathi"];
+    var k = g.concat(h);
+    document.getElementById("demo7").innerHTML = k;
+}
+</script>
+
+
+
+
+</body>
+</html>

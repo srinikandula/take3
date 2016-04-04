@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML=
+"The temperature today is " + tof(9) + " fahrenheit";
+function tof(c){
+	return (c*9/5)+32;
+}
+</script>
+<p id="celcius"></p>
+<script>
+function toC(f){
+	return (5/9)*(f-32);
+}
+document.getElementById("celcius").innerHTML= toC(48.2);
+</script>
+</body>
+</html>

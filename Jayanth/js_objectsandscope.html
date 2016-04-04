@@ -1,0 +1,57 @@
+<DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var person= {
+	firstname: "Jayanth",
+	lastname:"Dommaraju",
+	sex:"male",
+	age:"23",
+	car:"BMW",
+	height:"6 feet"
+};
+document.getElementById("demo").innerHTML=person.firstname+ " last name is " + person.lastname + ". Age of him is "+person.age+ " and he drives an "+person.car;
+</script>
+<p id="demo1"></p>
+<script>
+var person={
+	firstname:"Jayanth",
+	lastname:"Dommaraju",
+	fullname: function(){
+		return person.firstname+ " " + person.lastname;
+	}
+};
+document.getElementById("demo1").innerHTML=person.fullname();
+</script>
+<p id="demo2"></p>
+<script>
+var person={
+	firstname:"Jayanth",
+	lastname:"Dommaraju",
+	fullname: function(){
+		return person.firstname+ " " + person.lastname;
+	}
+};
+document.getElementById("demo2").innerHTML=person.fullname;
+</script>
+<p id="demo3"></p>
+<script>
+automobiles();
+document.getElementById("demo3").innerHTML=
+typeof carname;
+function automobiles(){
+	var carname="BMW";
+}
+</script>
+<p id="demo4">
+<script>
+var carName="BMW";
+automobile()
+function automobile() {
+	document.getElementById("demo4").innerHTML= window.carName;
+}
+</script>
+</body>
+
+</html>
