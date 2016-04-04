@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index15_Arrays_Adding_Deleting</title>
+</head>
+<body>
+	<h1>Adding and Deleting elements from an Array </h1>
+	<p style="text-decoration:underline">Adding Elements:</p>
+	<blockquote>
+		<p>Actual list of elements in an array:&nbsp<span id="Actual_list"></span></p>
+		<button type="button" onclick="R-15()">Click here to add R-15</button>
+		
+		
+	</blockquote>
+	<script type="text/javascript">
+		bikes=["Pulsar","Passion","Royal-Enfield","Avenger","CBZ"];
+		document.getElementById("Actual_list").innerHTML=bikes;
+		function R15bike()
+		{
+			R15=bikes.push("R-15");
+			return R15;
+		}
+		document.getElementById("with_R-15").innerHTML=R15bike();
+
+	</script>
+</body>
+</html>
+
