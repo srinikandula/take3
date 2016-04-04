@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index12_Functions_Celsius_Fahrenheit</title>
+</head>
+<body>
+	<h1>Temperature Units conversion</h2>
+	<p style="text-decoration:underline">Celsius to Fahrenheit:</p>
+		<blockquote>
+			<p>Now the Temperature is 12.78<sup>0</sup>C i.e., 12.78 degree celsius</p>
+			<p> In Fahrenheit it is:&nbsp <span id="TinF"></span></p>
+		</blockquote>
+	<p style="text-decoration:underline">Fahrenheit to Celsius:</p>
+		<blockquote>
+			<p>Now the Temperature is 55<sup>0</sup>F i.e., 55 degree Fahrenheit</p>
+			<p id="TinC"></p>
+		</blockquote>
+
+
+		<script type="text/javascript">
+			function TF(c)
+			{
+				var temp = ((c*9)/5)+32;
+				return temp.toFixed(2);
+			}
+			document.getElementById("TinF").innerHTML=TF(12.78);
+			document.getElementById("TinC").innerHTML="In Celsius it is:" + "" + TC(55);
+			function TC(f)
+			{
+				var temp = (f-32)*5/9;				
+				return temp.toFixed(2);
+			}			
+		</script>
+
+</body>
+
+</html>

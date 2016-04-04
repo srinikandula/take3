@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index14_Array_Properties</title>
+</head>
+<body>
+	<h1>Arrays using length property</h1>
+	<p style="text-decoration:underline">Length:</p>	
+		<blockquote> 
+			<p>The known brands are listed here:<span id="list"></span></p>		
+			<p>Respective rankings are here:&nbsp<span id="Rank"></span></p>
+			<p>Sorted list as per alphabets is:&nbsp<span id="sorted"></span></p>
+			<p>Least ranked is :&nbsp<span id="worstrank"></span> and the brand name corresponding is <span id="brandname"></span></p>
+			<p>Good ranking is :&nbsp<span id="goodrank"></span></p>
+			<p>Length of the array is:&nbsp<span id="length"></span></p>
+			<p>Average ranking is :&nbsp<span id="Avg"></span></p>
+			<p>Average ranking after rounding-up gives :&nbsp<span id="rAvg"></span></p>
+			<p>Average ranking after ceiling gives :&nbsp<span id="cAvg"></span></p>
+			<p>Average ranking after using floor gives :&nbsp<span id="fAvg"></span></p>			
+		</blockquote>
+		
+	<script type="text/javascript">
+	
+		brands=["Pepe","Wrangler","Nike","Adidas","Mufti"];
+		ranks=[1,2,3,10,20];		
+		average=(Math.max(1,2,3,10,20)+Math.min(1,2,3,10,20))/brands.length;
+		document.getElementById("list").innerHTML=brands;
+		document.getElementById("sorted").innerHTML=brands.sort();
+		document.getElementById("Rank").innerHTML=ranks;
+		document.getElementById("worstrank").innerHTML=Math.max(1,2,3,10,20);
+		document.getElementById("goodrank").innerHTML=Math.min(1,2,3,10,20);
+		document.getElementById("length").innerHTML=brands.length;
+		document.getElementById("Avg").innerHTML=average;
+		document.getElementById("rAvg").innerHTML=Math.round(average);
+		document.getElementById("cAvg").innerHTML=Math.ceil(average);
+		document.getElementById("fAvg").innerHTML=Math.floor(average);
+		//brands[0]=ranks[0];
+		//brands[5]=ranks[5];
+		document.getElementById("brandname").innerHTML=Math.max(1,2,3,10,20);
+		document.getElementById("test").innerHTML=area(5);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index11_Functions_Arithmetic</title>
+</head>
+<body>
+	<h1>Arithmetics Using Functions</h1>
+	<p>Here variable 'a' hold value 5 and variable 'b' holds value 5 as well...</p>
+	<p>If you want to try calculations for multiple values, change values in script section as the program is for dynamic value issuances...</p>
+	<blockquote>
+		<p>Sum of a,b is:&nbsp<span id="A1"></span></p>
+		<p>Sub of a,b is:&nbsp<span id="A2"></span></p>
+		<p>Mul of a,b is:&nbsp<span id="A3"></span></p>
+		<p>Div of a,b is:&nbsp<span id="A4"></span></p>
+		<p>Mod of a,b is:&nbsp<span id="A5"></span></p>
+	</blockquote>
+
+	<script type="text/javascript">
+		function Add(a,b)
+		{
+			var add=a+b;
+			return add;
+		}
+		function Sub(a,b)
+		{
+			var sub=a-b;
+			return sub;
+		}
+		function Mul(a,b)
+		{
+			var mul=a*b;
+			return mul;
+		}
+		function Div(a,b)
+		{
+			var div=a/b;
+			return div;
+		}
+		function Mod(a,b)
+		{
+			var mod=a%b;
+			return mod;
+		}
+		document.getElementById("A1").innerHTML=Add(5,5);
+		document.getElementById("A2").innerHTML=Sub(5,5);
+		document.getElementById("A3").innerHTML=Mul(5,5);
+		document.getElementById("A4").innerHTML=Div(5,5);
+		document.getElementById("A5").innerHTML=Mod(5,5);
+	</script>
+
+</body>
+</html>

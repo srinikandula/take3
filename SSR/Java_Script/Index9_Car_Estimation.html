@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index9_Car_Estimation</title>
+<style>
+		body{
+			border: 3px solid black;
+			background-image: url("http://www.enterprisecarsales.com/Media/Default/home/Under13KLineup.jpg");
+			background-position: center;
+			vertical-align: center;
+			background-repeat:no-repeat;
+		}
+		div{
+			float: right;
+			width:600px;
+			border:1px solid grey;
+		
+			}
+		section{			
+			float: right;
+			color:black;
+			clear:right;
+			}
+</style>
+</head>
+
+<body>
+	<h1>Car Estimation</h1>
+		<div>
+			<form style="line-height:30px;">
+				Name:<input type="text" name="fname" placeholder="First Name"> &nbsp <input type="text" name="lname" placeholder="Last Name"><br>
+				Gender: <input type="radio" name="gender" value="male" checked>Male
+						<input type="radio" name="gender" value="female">Female
+						<input type="radio" name="gender" value="other">Other<br>
+				Marital Status: <select name="MS">
+									<option>Single</option>
+									<option>Married</option>
+									<option>Divorced</option>
+								</select><br>
+				Age:<input type="number" name="age" min="21"><br>
+
+				Brand: <input list="brand">
+								<datalist id="brand">
+									<option value="BMW">
+									<option value="Mercedes-Benz">
+									<option value="Audi">
+									<option value="Ford">
+									<option value="Honda">
+									<option value="Nissan">
+									<option value="Chevrolet">
+								</datalist>
+				Model:	<input name="model">
+								<datalist id="model">
+									<option value="A5">
+									<option value="Accord">
+									<option value="Dx">
+									<option value="Q5">
+									<option value="Q1">
+									<option value="LX">
+								</datalist>
+				Color Selection: <input type="color"><br>				
+				Insurance type:<input type="checkbox" name="Insu_type" value="12_months">12 Months &nbsp
+				<input type="checkbox" name="Insu_type" value="24_months">24 Months<br>
+
+				Date of reservation: <input type="date" name="DOR">
+
+			</form>			
+		</div>
+		<section>
+			<p>Amount to be paid as part of installement basis every month upto 10 years is:&nbsp <span id="Inst_per_month"></span></p><br>
+
+			<p>Amount to be paid as part of installement basis every month upto 10 years is:&nbsp <span id="Inst_per_month"></span></p>
+		</section>
+		
+		<script type="text/javascript">
+				var Price=50000;				
+				var Insurance=300;
+				var Registration=1000;
+				var miscellaneous=2000;
+				var Total=Price+(Insurance*12*10)+Registration+miscellaneous;
+				var Down_Payment=20000;
+                var per_month=(Total-Down_Payment)/(12*10);
+                document.getElementById("Inst_per_month").innerHTML=per_month;
+		</script>
+
+</body>
+</html>

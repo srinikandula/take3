@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index3_Image_Change</title>
+</head>
+
+<body>
+	<h1>Click on below image</h1>
+	<img id="myImage" onclick="changeImage()" src="https://i.ytimg.com/vi/vRf8hoZg84I/maxresdefault.jpg" width="600" height="500">
+
+<p>Click on the image and see magic.</p>
+
+<script type="text/javascript">
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("http://www.charminartalkies.com/wp-content/uploads/2015/08/original_Chiru_479d93afb1c02.jpg")) {
+        image.src = "https://i.ytimg.com/vi/vRf8hoZg84I/maxresdefault.jpg ";
+    } else {
+        image.src = "http://www.charminartalkies.com/wp-content/uploads/2015/08/original_Chiru_479d93afb1c02.jpg";
+    }
+}
+</script>
+</body>
+</html>
+

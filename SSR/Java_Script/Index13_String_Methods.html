@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index13_String_Methods</title>
+</head>
+<body>
+	<h1>Strings with different Methods</h1>
+	<p style="text-decoration:underline">String Length:</p>
+		<blockquote>
+			<p>The length of the string "My name is Sachin 'Tendulkar'" is: <span id="length"></span></p>
+		</blockquote>
+	<p style="text-decoration:underline">String index location:</p>
+		<blockquote>
+			<p>The index location of "ac" in the string "My name is Sachin 'Tendulkar'" is: <span id="location"></span></p> 
+		</blockquote>
+	<p style="text-decoration:underline">String last occurance:</p>
+		<blockquote>
+			<p>The last occurance of "a" in the string "My name is Sachin 'Tendulkar'" is: <span id="lastOccurance"></span></p> 
+		</blockquote>
+	<p style="text-decoration:underline">String search:(==' indexOf ')</p>
+		<blockquote>
+			<p>Searching a sub-string "name" in the string "My name is Sachin 'Tendulkar'" is: <span id="search"></span></p> 
+		</blockquote>
+	<p style="text-decoration:underline">String slice:(substring(),substr()):</p>
+		<blockquote>
+			<p>Slicing a sub-string "Ten" in the string "My name is Sachin 'Tendulkar'" is: <span id="slice"></span></p> 
+		</blockquote>
+	<p style="text-decoration:underline">Replacing a String:</p>
+		<blockquote>
+			<p>Replacing "Sridhar 'Reddy'" in place of "Sachin 'Tendulkar'" in the string "My name is Sachin 'Tendulkar'" is: <span id="replace"></span></p> 
+		</blockquote>		
+	<script type="text/javascript">
+		description="My name is Sachin 'Tendulkar'";
+		document.getElementById("length").innerHTML=description.length;
+		document.getElementById("location").innerHTML=description.indexOf("ac");
+		document.getElementById("lastOccurance").innerHTML=description.lastIndexOf("a");
+		document.getElementById("search").innerHTML=description.search("name");
+		document.getElementById("slice").innerHTML=description.slice(19,22);
+		document.getElementById("replace").innerHTML=description.replace("Sachin 'Tendulkar'","Sridhar 'Reddy'");
+
+	</script>
+</body>
+</html>
