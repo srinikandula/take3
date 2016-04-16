@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var a = Boolean(1);
+var b = Boolean(0.14);
+var c = Boolean(-150);
+var d = Boolean("False");
+var e = Boolean('Hello');
+var f = Boolean(1 + 7 + 3.14);
+var g= Boolean();
+var h= Boolean("");
+var i= Boolean(0);
+var j= Boolean(-0);
+var k= Boolean(null);
+var l= Boolean(false);
+var m= Boolean("H"+10);
+
+document.getElementById("demo").innerHTML =
+  a + "<br>" +
+  b + "<br>" +
+ c + "<br>" +
+  d + "<br>" +
+  e + "<br>" +
+ f+"<br>"+
+ g+"<br>"+
+ h+"<br>"+
+ i+"<br>"+
+ j+"<br>"+
+ k+"<br>"+
+ l+"<br>"+
+ m;
+</script>
+
+</body>
+</html>
