@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index18_Factorial</title>
+<body>
+	<h1>Factorial of number entered</h1>
+	<input id="user_choice">
+	<button onclick="fact()">calculate</button>
+	<p id="factorial"></p>
+	<script type="text/javascript">
+		function fact()
+		{
+			var n=document.getElementById("user_choice").value;
+			var i;
+			var a=1;
+			for(i=n;i>=1;i--)
+			{
+				a=(a*i) + "<br>";
+				//a=a+(i*2) + "<br>" ;
+			}
+			document.getElementById("factorial").innerHTML=a;
+		}
+	</script>
+</body>
+</html>
+
