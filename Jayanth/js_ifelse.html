@@ -1,0 +1,40 @@
+<DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+if (new Date().getHours()>18){
+	document.getElementById("demo").innerHTML = "gud night";
+}
+</script>
+<p id="demo1"></p>
+<script>
+if(new Date().getHours()<18){
+	greeting = "good day"
+}
+else{
+	greeting = "gud evening"
+}
+document.getElementById("demo1").innerHTML = greeting;
+</script>
+
+<button onclick="myfunction()">Try it</button>
+<p id="demo2"></p>
+<script>
+function myfunction(){
+	var greetings;
+	var time= new Date().getHours();
+    if (time < 10) {
+        greetings = "Good morning";
+    } else if (time < 20) {
+        greetings = "Good day";
+    } else {
+        greetings = "Good evening";
+    }
+document.getElementById("demo2").innerHTML = greetings;
+}
+</script>
+
+
+</body>
+</html>
