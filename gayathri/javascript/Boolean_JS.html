@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body{
+			background-image: url("http://previews.123rf.com/images/eladora/eladora0811/eladora081100013/3861982-Yellow-color-wrinkled-paper-as-background-Art-is-painted-by-photographer--Stock-Photo.jpg");
+		}
+
+	</style>
+	<head>
+		<title>Boolean functions in javascript</title>
+	</head>
+	<body>
+		<h2>Display the values for the  Boolean following boolean functions: </h2>
+		<button onclick="myFunction()">Try it</button>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<p id="demo7"></p>
+
+		<p><u><b>Boolean prototype constructor</b></u></p>
+		<p>On clicking the button if the value is trure it will display yellow otherwise it will display red.</p>
+		<button onclick="colors()">Try it</button> 
+		<p id="demo8"></p>
+
+
+		
+		<script>
+			function myFunction(){
+				document.getElementById("demo").innerHTML = "Display the value of boolean (99 > 66) is " + Boolean(99 > 66);
+				document.getElementById("demo1").innerHTML = "Display the value of boolean (55 < 33) is " + Boolean(55 < 33);
+				// Everything without a "Real" is False
+				var x = 0;
+				document.getElementById("demo2").innerHTML = "Display the boolen value of 0 is " + Boolean(x);
+				var y = -0;
+				document.getElementById("demo3").innerHTML = "Display the boolean value of -0 is " + Boolean(y);
+				var i = "";
+				document.getElementById("demo4").innerHTML = "Display the boolean value of empty string is " + Boolean(i);
+				var k = 60 / "S";
+				document.getElementById("demo5").innerHTML = "Display the boolean value of NaN is " + Boolean(k);
+				var l;
+				document.getElementById("demo6").innerHTML = "Display the boolean value of undefined value is " + Boolean(l);
+				var bool = true;
+				var z = bool.toString() //this will convert a boolean into string.
+				document.getElementById("demo7").innerHTML = "Display boolean value as a string " + z;
+			}
+
+			Boolean.prototype.myColor = function(){
+				if (this.valueOf() == true) 
+				{
+					return "yellow";
+				} 
+				else
+				{
+					return "red";
+				}
+			}
+
+			function colors(){
+				var a = true;
+				document.getElementById("demo8").innerHTML = a.myColor();
+			}
+
+			
+		</script>
+
+	</body>
+</html>
