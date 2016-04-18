@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment1_of_2</title>
+</head>
+<body>
+	<h1>Words selection and reversing with case sensitivity.</h1>	
+	<p id="line">What ever the string may be, like "My name is Sridhar Reddy " or anything else from this line, select 2 words to see magic:</p>
+	<p id="Picked_Words"></p>
+	<p id="res1"></p>
+
+
+	<script type="text/javascript">
+		var word1,word2,word,rword1,rword2,rword,len1,len2,lrword1,lrword2,ulrword1="",ulrword2="",ulrword;
+		var sentence=document.getElementById("line").innerHTML;
+		var arr_1=sentence.split(" ");
+		len1=arr_1.length;
+		for(var i=0;i<=len1-1;i++)
+		{
+			if(arr_1[i]=="Sridhar" || arr_1[i]=="sridhar")
+			{
+				word1=arr_1[i];
+			}
+			else if(arr_1[i]=="Reddy" || arr_1[i]=="reddy")
+			{
+				word2=arr_1[i];
+			}
+		}
+	word=word1+ " " + word2;
+	document.getElementById("Picked_Words").innerHTML=word;
+
+		rword1=word1.split("").reverse().join("");
+		rword2=word2.split("").reverse().join("");
+		rword=rword1+" "+rword2;
+		lrword1=rword1.toLowerCase();
+		lrword2=rword2.toLowerCase();
+		lrword=lrword1+" "+lrword2;
+		len1=lrword1.length;
+		len2=lrword2.length;
+		for(i=0;i<=len1-1;i++)
+		{
+			if(i==0)
+			{
+				ulrword1=ulrword1+lrword1[i].toUpperCase();
+			}
+			else
+			{
+				ulrword1=ulrword1+lrword1[i];
+			}
+		}
+		for(j=0;j<=len2-1;j++)
+		{
+			if(j==0)
+			{
+				ulrword2=ulrword2+lrword2[j].toUpperCase();
+			}
+			else
+			{
+				ulrword2=ulrword2+lrword2[j];
+			}
+		}
+		ulrword=ulrword1+" "+ulrword2;
+		document.getElementById("res1").innerHTML=ulrword;
+	</script>
+	
+</body>
+</html>
