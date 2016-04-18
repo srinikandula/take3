@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body{
+			background-image: url("http://desktopbackgrounds4u.com/wp-content/gallery/light-pink-wallpapers/frame-light-cute-pink-flower-color-pattern-art-158887.jpg");
+			background-size: 1000px;
+		}
+	</style>
+	<body>
+		<h1>Arrays and its properties</h1>
+		<p>The best way to loop through an array is using a standard for loop:</p>
+		<button onclick="myarray()">Try it</button>
+		<p id="demo"></p>
+
+		<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+		<button onclick="myindex()">Try it</button>
+		<p id="demo1"></p>
+
+		
+		<p>The pop method removes the last element from an array.</p>
+		<button onclick="mypopping()">Try it </button>
+		<p id="demo3"></p>
+
+
+	
+	<script>
+		
+		function myarray(){
+			var index;
+			var text = "<ul>"
+			var fruits = ["Banana" , "Orange" , "Kiwi" , "Mango" , "Apple" , "Pineapple"];
+			for (index = 0; index < fruits.length; index++){
+				text += "<li>" + fruits[index] + "</li>" ;
+			}
+			text += "</ul>"
+			document.getElementById("demo").innerHTML = text;
+		}
+		var fruits = ["kiwi" , "Watermelon" , "Grapes" , "Strawberry"];
+		document.getElementById("demo1").innerHTML = Fruits;
+
+		function myindex(){
+			fruits[10] = "Lemon" ;
+			document.getElementById("demo1").innerHTML = fruits[10]
+		} 
+
+		
+	var names = ["Adithya" , "Alekhya" , "Akshaj" , "Ayan" , "Arohi"];
+	document.getElementById("demo3").innerHTML = names;
+	function mypopping() {
+		names.pop();
+		document.getElementById("demo3").innerHTML = names;
+
+	}
+	</script>
+	</body>
+</html>	
