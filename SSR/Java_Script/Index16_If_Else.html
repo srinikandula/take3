@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index16_If_Else</title>
+</head>
+<body>
+	<h1>Program displaying day wishes</h1>
+	<p>If time is below 12pm it displays "Good Morning"</p>
+	<p>If time is in between 12pm and 19pm it displays "Good Afternoon"</p>
+	<p>If time is in between 19pm and 23pm it displays "Good Evening"</p>
+	
+	<button onclick="time()">Try it</button>
+	<p id="greetings"></p>
+	<script type="text/javascript">
+	function time()
+	{
+		var hour=new Date().getHours();
+		var wishes;
+		if (hour<12)
+		{
+			wishes="Good Morning";
+		}
+		else if(hour >= 12 && hour<19)
+		{
+			wishes="Good Afternoon";
+		}
+		else
+		{
+			wishes="Good Nite";
+		}
+		document.getElementById("greetings").innerHTML=wishes;
+	}
+
+	</script>
+
+</body>
+</html>

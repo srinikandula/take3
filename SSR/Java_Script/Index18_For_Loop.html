@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index18_For_Loop</title>
+<body>
+	<h1>Multiples of 2</h1>
+	<input id="user_choice">
+	<button onclick="even()">calculate</button>
+	<p id="even_multiples"></p>
+	<script type="text/javascript">
+		function even()
+		{
+			var n=Number(document.getElementById("user_choice").value);
+			var i;
+			var a="";
+			for(i=0;i<=n/2;i++)
+			{
+				a=a+(i*2) + "<br>" ;
+				
+			}
+			document.getElementById("even_multiples").innerHTML=a;
+		}
+	</script>
+</body>
+</html>

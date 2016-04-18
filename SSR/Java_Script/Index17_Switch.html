@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index17_Switch</title>
+</head>
+<body>
+	<h1>Displays the dy of a week at present using "switch"</h1>
+	<button onclick="showday()">Try It</button>
+
+	<p id="dayname"></p>
+	<script type="text/javascript">
+	function showday()
+	{
+		var daynumber=new Date().getDay();
+		var day;
+		switch(daynumber)
+		{
+			case 0:
+			{
+				 day = "Sunday";
+				 break;
+			}
+			case 1:
+			{
+				 day = "Monday";
+				 break;
+			}
+			case 2:
+			{
+				 day = "Tuesday";
+				 break;
+			}
+			case 3:
+			{
+				 day = "Wednesday";
+				 break;
+			}
+			case 4:
+			{
+				 day = "Thursday";
+				 break;
+			}
+			case 5:
+			{
+				 day = "Friday";
+				 break;
+			}
+			case 6:
+			{
+				 day = "Saturday";
+				 break;
+			}
+			document.getElementById("dayname").innerHTML=day;
+		}
+	}
+		
+	</script>
+</body>
+</html>
