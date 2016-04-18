@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment_1</title>
+</head>
+<body>
+	<h1>Reversing the aphabets in a word</h1>
+	<p> My first program is 'Hello World!'</p>
+	<button onclick="Hw()">Click to display actual string</button>
+	<p id="actual"></p>
+	<p> <span id="word1"></span>&nbsp<span id="word2"></span></p>	
+	<button onclick="reverse()">Click to reverse</button>	
+	<p> <span id="rword1"></span>&nbsp<span id="rword2"></span></p>
+	<p id="rword"></span></p>
+	<p id="After_Capitalizing"></p>
+
+	<script type="text/javascript">
+		function Hw()
+		{
+			var sentence="Hello World";					
+			var l=sentence.length;
+			var word1="";
+			var word2="";
+			for(i=0;i<=4;i++)
+			{
+				var word1=word1+sentence[i];
+			}
+			for(i=6;i<=l-1;i++)
+			{
+				var word2=word2+sentence[i];
+			}	
+			
+			document.getElementById("actual").innerHTML=sentence;
+			document.getElementById("word1").innerHTML="First word is" +" " + word1;
+			document.getElementById("word2").innerHTML="Second word is" +" "+ word2;
+		}
+
+
+
+		function reverse()
+		{
+			var sentence="Hello World";
+			var sentence_s=sentence.toLowerCase();
+			var l=sentence_s.length;
+			var rword1="";
+			var rword2="";
+			var rsword1="";
+			var rsword2="";
+			for(i=4;i>=0;i--)
+				{
+				var rword1=rword1+sentence_s[i];
+				
+				}
+			for(i=l-1;i>5;i--)
+				{
+					var rword2=rword2+sentence_s[i];
+				}
+			for(i=4;i>=0;i--)
+				{
+					if(i==4)
+					{
+						var rsword1=rsword1+sentence_s[i].toUpperCase();
+					}
+					else
+					{
+					rsword1=rsword1+sentence_s[i];
+					}
+				
+				}
+			for(i=l-1;i>5;i--)
+				{
+					if(i==l-1)
+					{
+						rsword2=rsword2+sentence_s[i].toUpperCase();
+					}
+					else
+					{
+					var rsword2=rsword2+sentence_s[i];
+					}
+					
+				}
+			var rword=rword1+ " " + rword2;
+			var rword_s=rsword1 + " " + rsword2			
+			document.getElementById("rword1").innerHTML="First word after reversing is " + rword1;
+			document.getElementById("rword2").innerHTML="Second word after reversing is " + rword2;
+			document.getElementById("rword").innerHTML="Complete words after reversing is " + rword;	
+			document.getElementById("After_Capitalizing").innerHTML="Complete word after reversing with case sensitive is " + rword_s;		
+			
+		}
+	</script>
+</body>
+</html>
