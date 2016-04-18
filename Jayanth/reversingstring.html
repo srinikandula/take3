@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var string = "india is my country";
+var array = string.split(" ");
+var i = 0;
+var text = "";
+while (array[i]) {
+    text += array[i].split("").reverse().join("") + " ";
+    i++; 
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+</body>
+</html>
