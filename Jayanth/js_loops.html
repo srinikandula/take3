@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<p id="demo"></p>
+<script>
+var names= ["jay", "gayu","sridhar","raju"];
+var text= "";
+var i;
+for (i=0; i<5;i++){
+	text += names[i]+"<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<p id="demo1"></p>
+
+<script>
+var name = ["jay", "gayu","sridhar","raju"];
+
+var i = 0;
+var len = name.length;
+var text = "";
+
+for (; i < len; ) {
+    text += name[i] + "<br>";
+    i++;
+}
+document.getElementById("demo1").innerHTML = text;
+</script>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+    var text = "";
+    var i = 3;
+    while (i < 5) {
+        text += "<br> " + i;
+        i++;
+    }
+    document.getElementById("demo2").innerHTML = text;
+}
+</script>
+
+<p id="demo3"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    if (i === 4) { break; }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+<p id="demo4"></p>
+<script>
+var text= "";
+var k;
+for(k=0;k<5;k++){
+	if(k===4){continue;}
+	text+="numer is"+k+"<br>";
+}
+document.getElementById("demo4").innerHTML= text;
+</script>
+</body>
+</html
