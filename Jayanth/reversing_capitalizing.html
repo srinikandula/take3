@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+p.capitalize {
+    text-transform: capitalize;
+}
+</style>
+
+<p id="demo", class="capitalize"></p>
+
+
+<script>
+var string = "India is my country";
+var str = string.toLowerCase();
+var array = str.split(" ")
+var i = 0;
+var text = "";
+while (array[i]) {
+    text += array[i].split("").reverse().join("")+ " ";
+    
+    i++; 
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+</body>
+</html>
