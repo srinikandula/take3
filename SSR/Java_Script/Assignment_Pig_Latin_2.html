@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment_Pig_Latin</title>
+</head>
+<body>
+	<h1>Pig Latin Translator</h1>
+	<p>Please enter text below and hit "Translate" button to translate text to 'Pig Latin language'.</p>
+	<input id="E_Text" type="text"></input>
+	<button onclick="translator()">Translate</button>
+	<p id="tanslated_text">Translated text will display here....</p>
+
+	<script type="text/javascript">		
+		function translator()
+		{			
+			var pig_latin_prefix="",pig_latin_stem="",pig_latin_word,pig_latin_final="";
+			var e_text=document.getElementById("E_Text").value;
+			var arr_e_text=e_text.split(" ");
+			var e_text_len=arr_e_text.length;
+			var vowels=["a","e","i","o","u","y"];
+			for(i=0;i<=e_text_len-1;i++)
+			{
+				var alpha=arr_e_text[i].split("");
+				var alpha_len=alpha.length;
+				for(j=0;j<=alpha_len-1;j++)
+				{
+					var eng=alpha[j];
+					for(k=0;k<=vowels.length-1;k++)	
+					{
+						if(vowels[k]==eng)
+						{
+							var f_vowel=alpha[j];
+							var index_f_vowel=alpha.indexOf(f_vowel);
+							var pig_latin_stem=alpha.slice(index_f_vowel,alpha_len).join("");
+							var pig_latin_prefix=alpha.slice(0,index_f_vowel).join("");
+							var pig_latin_word=pig_latin_stem + pig_latin_prefix;
+							var pig_latin_word_s=pig_latin_word.toLowerCase() + "ay";							
+							var j=alpha_len+1;	
+							break ;														
+						}
+						else
+						{
+							continue;
+						}						
+					}
+				}
+			}
+
+			document.getElementById("tanslated_text").innerHTML=pig_latin_word_s;
+		}		
+	</script>
+</body>
+</html>
