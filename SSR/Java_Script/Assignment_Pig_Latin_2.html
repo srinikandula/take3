@@ -18,9 +18,14 @@
 			var arr_e_text=e_text.split(" ");
 			var e_text_len=arr_e_text.length;
 			var vowels=["a","e","i","o","u","y"];
+			var firstChar = null;
+				var toLowerFirstChar = null;
 			for(i=0;i<=e_text_len-1;i++)
 			{
 				var alpha=arr_e_text[i].split("");
+				firstChar = alpha[0];  // Hello
+				toLowerFirstChar = firstChar.toLowerCase(); //h
+				
 				var alpha_len=alpha.length;
 				for(j=0;j<=alpha_len-1;j++)
 				{
@@ -45,7 +50,10 @@
 					}
 				}
 			}
-
+				if(firstChar !== toLowerFirstChar){
+					var char_0 = pig_latin_word_s.charAt(0);
+					pig_latin_word_s = char_0.toUpperCase()+ pig_latin_word_s.substr(1);	
+				}
 			document.getElementById("tanslated_text").innerHTML=pig_latin_word_s;
 		}		
 	</script>
