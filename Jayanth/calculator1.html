@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <head>
+ <style>
+ #nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:200px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+</style>
+ <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+ <script type="text/javascript">
+  
+     function setVal(number){
+   var textVal = $("#displayValue").val();
+   var newVal = textVal + number;
+      $("#displayValue").val(newVal);
+     }
+     function add(){
+      var textVal = $("#displayValue").val();
+      $("#displayValue").data("val", textVal);
+      $("#displayValue").data("operator", "+");
+      $("#displayValue").val("");
+     }
+     function subtract(){
+      var textVal = $("#displayValue").val();
+      $("#displayValue").data("val", textVal);
+      $("#displayValue").data("operator", "-");
+      $("#displayValue").val("");
+     }
+     function divide(){
+      var textVal = $("#displayValue").val();
+      $("#displayValue").data("val", textVal);
+      $("#displayValue").data("operator", "/");
+      $("#displayValue").val("");
+     }
+     function multiply(){
+      var textVal = $("#displayValue").val();
+      $("#displayValue").data("val", textVal);
+      $("#displayValue").data("operator", "*");
+      $("#displayValue").val("");
+     }
+     
+     function result(){
+      var newVal = $("#displayValue").val();
+      var operand1 = $("#displayValue").data("val");
+      var operator = $("#displayValue").data("operator");
+      if(operator == "+"){
+       $("#displayValue").val(parseInt(operand1) + parseInt(newVal));
+      }
+      if(operator=="-"){
+      	$("#displayValue").val(parseInt(operand1) - parseInt(newVal));
+      }
+      
+       if(operator=="/"){
+      	$("#displayValue").val(parseInt(operand1) / parseInt(newVal));
+      }
+       if(operator=="*"){
+      	$("#displayValue").val(parseInt(operand1) * parseInt(newVal));
+      }
+      
+     }
+ </script>
+</head>
+ </head>
+<body>
+
+<input id="displayValue" type="text"style="width:200px; height:35px;text-align: right; "><br>
+<div id="nav">
+<button onclick="setVal(1)"style="width:50px; height:50px; float:left">1 </button>
+<button onclick="setVal(2)"style="width:50px; height:50px; float:left">2</button>
+<button onclick="setVal(3)"style="width:50px; height:50px; float:left">3</button>
+<button onclick="subtract()"style="width:50px; height:50px; float:left">-</button>
+<button onclick="setVal(4)"style="width:50px; height:50px; float:left">4</button>
+<button onclick="setVal(5)"style="width:50px; height:50px; float:left">5</button>
+<button onclick="setVal(6)"style="width:50px; height:50px; float:left">6</button>
+
+<button onclick="add()"style="width:50px; height:50px; float:left">+</button>
+
+
+<button onclick="setVal(7)"style="width:50px; height:50px; float:left">7</button>
+<button onclick="setVal(8)"style="width:50px; height:50px; float:left">8</button>
+<button onclick="setVal(9)"style="width:50px; height:50px; float:left">9</button>
+<button onclick="multiply()"style="width:50px; height:50px; float:left">*</button>
+<button onclick="setVal(0)"style="width:50px; height:50px; float:left">0</button>
+
+<button onclick="clear()"style="width:50px; height:50px; float:left">C</button>
+
+<button onclick="divide()"style="width:50px; height:50px; float:left">/</button>
+
+<button onclick="result()"style="width:50px; height:50px; float:left">=</button>
+</div>
+<script>
+$(document).ready(function(){
+ console.log("jquery ready....");
+ 
+
+});
+
+</script>
+</body>
+</html>
+
+
