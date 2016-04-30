@@ -17,12 +17,27 @@
 			<p>Average ranking after rounding-up gives :&nbsp<span id="rAvg"></span></p>
 			<p>Average ranking after ceiling gives :&nbsp<span id="cAvg"></span></p>
 			<p>Average ranking after using floor gives :&nbsp<span id="fAvg"></span></p>			
+			<p>Rank for Nike :&nbsp<span id="Nike"></span></p>			
 		</blockquote>
 		
 	<script type="text/javascript">
 	
 		brands=["Pepe","Wrangler","Nike","Adidas","Mufti"];
-		ranks=[1,2,3,10,20];		
+		ranks=[1,2,3,10,20];	
+		catalog = [{"brand":"Pepe", "rank": 1}, {"brand":"Wrangler", "rank": 2},{"brand":"Nike", "rank": 7}];	
+
+		function getRank(name) {
+			//1. initialization
+			//2. condition
+			//3. increment/decrement
+			for(var index=0;index<catalog.length;index++){
+				var product = catalog[index];
+				if(product.brand === name){
+					return product.rank;
+				}
+			}
+			return -1;
+		}
 		average=(Math.max(1,2,3,10,20)+Math.min(1,2,3,10,20))/brands.length;
 		document.getElementById("list").innerHTML=brands;
 		document.getElementById("sorted").innerHTML=brands.sort();
@@ -37,7 +52,8 @@
 		//brands[0]=ranks[0];
 		//brands[5]=ranks[5];
 		document.getElementById("brandname").innerHTML=Math.max(1,2,3,10,20);
-		document.getElementById("test").innerHTML=area(5);
+		//document.getElementById("test").innerHTML=area(5);
+		document.getElementById("Nike").innerHTML=getRank('Nike');
 	</script>
 
 </body>

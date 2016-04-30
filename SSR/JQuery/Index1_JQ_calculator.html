@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Index1_JQ_calculator</title>
+		<style>
+		input{
+			height:30px;
+			}
+		button{
+			width: 50px;height: 50px;
+		}
+		table{
+			border: 1px solid black;			
+			margin: auto;
+			}		
+			#header{
+				background-color: black;
+				width: 100%;
+				color: white;
+				float: left;
+			}
+			#nav{
+				background-color: blue;
+				width: 100%;
+				float: left;
+				text-align: center;
+			}
+			#article{
+				background-color: orange;
+				width: 70%;
+				float:left;
+				height: 500px;
+			}
+			#aside{
+				background-color: pink;
+				width: 30%;
+				float:left;
+				height: 500px;
+			}
+			#footer{
+				background-color: black;
+				width: 100%;
+				color:white;
+				clear: both;
+				text-align: center;
+			}
+		</style>
+
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript">
+			function setval(num)
+			{
+				var textval=$("#displayvalue").val();
+				var newval=textval+num;
+				$("#displayvalue").val(newval);
+			}
+			function add()
+			{
+				var textval=$("#displayvalue").val();
+				$("#displayvalue").data("abc",textval);
+				$("#displayvalue").data("operator","+");
+				$("#displayvalue").val(""); 
+				$("#storevalue").val(textval+"+");
+			}
+			function sub()
+			{
+				var textval=$("#displayvalue").val();
+				$("#displayvalue").data("abc",textval);
+				$("#displayvalue").data("operator","-");
+				$("#displayvalue").val(""); 
+				$("#storevalue").val(textval+"-");
+			}
+			function mul()
+			{
+				var textval=$("#displayvalue").val();
+				$("#displayvalue").data("abc",textval);
+				$("#displayvalue").data("operator","*");
+				$("#displayvalue").val("");
+				$("#storevalue").val(textval+"*"); 
+			} 
+			function div()
+			{
+				var textval=$("#displayvalue").val();
+				$("#displayvalue").data("abc",textval);
+				$("#displayvalue").data("operator","/");
+				$("#displayvalue").val("");
+				$("#storevalue").val(textval+"/"); 
+			} 
+			function mod()
+			{
+				var textval=$("#displayvalue").val();
+				$("#displayvalue").data("abc",textval);
+				$("#displayvalue").data("operator","%");
+				$("#displayvalue").val(""); 
+				$("#storevalue").val(textval+"%");
+			}  
+			function result()
+			{
+				var newval=$("#displayvalue").val();
+				var operand = $("#displayvalue").data("abc");
+      			var operator = $("#displayvalue").data("operator");
+				if(operator=="+")
+				{
+					$("#displayvalue").val(parseInt(operand)+parseInt(newval));
+				}
+				else if (operator=="-")
+				{
+					$("#displayvalue").val(parseInt(operand)-parseInt(newval));
+				}
+				else if (operator=="*")
+				{
+					$("#displayvalue").val(parseInt(operand)*parseInt(newval));
+				}
+				else if (operator=="/")
+				{
+					$("#displayvalue").val(parseInt(operand)/parseInt(newval));
+				}
+				else if (operator=="%")
+				{
+					$("#displayvalue").val(parseInt(operand)%parseInt(newval));
+				}
+				$("#storevalue").val(operand+operator+newval);		
+			}
+			function c()
+			{
+				$("#displayvalue").val("");
+				$("#storevalue").val("");
+			}
+			function ce()
+			{
+				$("#displayvalue").val("");
+			}
+			function del()
+			{
+				var newval=$("#displayvalue").val();
+				var arr=newval.split("");
+				var len=arr.length;
+				var new_num="";
+				for(i=0;i<=len-2;i++)
+				{
+					new_num=new_num+arr[i];
+				}
+				$("#displayvalue").val(new_num);
+			}
+		</script>		
+	</head>
+
+	<body>
+		<div id="header">
+			
+		<h1>Calculator</h1>
+			
+		</div>
+		<div id="nav">
+			
+			<p>Calculator using JQuery</p>
+		
+		</div>
+
+		<div id="article">
+						
+			<table>
+				<tr>
+					<td><input id="storevalue" type="text" style="width:100%;text-align:right; "></input><br></td>
+				</tr>
+				<tr>
+					<td><input id="displayvalue" type="text" style="width:100%;text-align:right;"></input><br></td>
+				</tr>
+				<tr>
+					<td><button onclick="ce()">CE</button>
+						<button onclick="c()">C</button>
+						<button onclick="del()">Del</button>
+						<button onclick="div()">/</button><br>
+						<button onclick="setval(7)">7</button>
+						<button onclick="setval(8)">8</button>
+						<button onclick="setval(9)">9</button>
+						<button onclick="mul()">X</button><br>
+						<button onclick="setval(4)">4</button>
+						<button onclick="setval(5)">5</button>
+						<button onclick="setval(6)">6</button>
+						<button onclick="add()">+</button><br>
+						<button onclick="setval(1)">1</button>
+						<button onclick="setval(2)">2</button>
+						<button onclick="setval(3)">3</button>
+						<button onclick="sub()">-</button><br>
+						<button onclick="setval(.)">.</button>
+						<button onclick="setval(0)">0</button>
+						<button onclick="result()">=</button>
+						<button onclick="mod()">%</button><br>
+					</td>
+				</tr>
+			</table>			
+		</div>
+
+		<div id="aside">
+			
+				<p>hi</p>
+
+		</div>
+
+		<div id="footer">
+			
+			Copy &copy Rights Reserved
+			
+		</div>
+	</body>
+</html>

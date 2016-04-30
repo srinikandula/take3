@@ -8,6 +8,7 @@
 	<button onclick="fact()">calculate</button>
 	<p id="factorial"></p>
 	<script type="text/javascript">
+	 // 1 1 2 3 5 8  
 		function fact()
 		{
 			var n=document.getElementById("user_choice").value;
@@ -15,7 +16,8 @@
 			var a=1;
 			for(i=n;i>=1;i--)
 			{
-				a=(a*i) + "<br>";
+				a = a*i;
+				console.log(a);
 				//a=a+(i*2) + "<br>" ;
 			}
 			document.getElementById("factorial").innerHTML=a;
