@@ -49,10 +49,20 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
 		<script type="text/javascript">
 			function setval(num)
-			{
+
+			{				
 				var textval=$("#displayvalue").val();
 				var newval=textval+num;
 				$("#displayvalue").val(newval);
+				/*var str=newval.split("");
+				var len=str.length;
+				for(i=0;i<=len-1;i++)
+				{
+					if(str[i]!=".")
+					{
+						continue;
+					}
+				}	*/		
 			}
 			function add()
 			{
@@ -101,23 +111,23 @@
       			var operator = $("#displayvalue").data("operator");
 				if(operator=="+")
 				{
-					$("#displayvalue").val(parseInt(operand)+parseInt(newval));
+					$("#displayvalue").val((parseFloat(operand)+parseFloat(newval)).toFixed(2));
 				}
 				else if (operator=="-")
 				{
-					$("#displayvalue").val(parseInt(operand)-parseInt(newval));
+					$("#displayvalue").val((parseFloat(operand)-parseFloat(newval)).toFixed(2));
 				}
 				else if (operator=="*")
 				{
-					$("#displayvalue").val(parseInt(operand)*parseInt(newval));
+					$("#displayvalue").val((parseFloat(operand)*parseFloat(newval)).toFixed(2));
 				}
 				else if (operator=="/")
 				{
-					$("#displayvalue").val(parseInt(operand)/parseInt(newval));
+					$("#displayvalue").val((parseFloat(operand)/parseFloat(newval)).toFixed(2));
 				}
 				else if (operator=="%")
 				{
-					$("#displayvalue").val(parseInt(operand)%parseInt(newval));
+					$("#displayvalue").val((parseFloat(operand)%parseFloat(newval)).toFixed(2));
 				}
 				$("#storevalue").val(operand+operator+newval);		
 			}
@@ -183,7 +193,7 @@
 						<button onclick="setval(2)">2</button>
 						<button onclick="setval(3)">3</button>
 						<button onclick="sub()">-</button><br>
-						<button onclick="setval(.)">.</button>
+						<button onclick="setval('.')">.</button>
 						<button onclick="setval(0)">0</button>
 						<button onclick="result()">=</button>
 						<button onclick="mod()">%</button><br>
