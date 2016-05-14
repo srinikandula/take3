@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+	</script>
+	<script> 
+	$(document).ready(function(){
+	    $("#flip").click(function(){
+	        $("#panel").slideToggle("slow");
+	    });
+	});
+	
+	</script>
+	<style> 
+		#panel, #flip {
+		    padding: 5px;
+		    text-align: center;
+		    background-color: yellow;
+		    border: solid 1px #c3c3c3;
+		    border-radius: 30px;
+		}
+
+		#panel {
+		    padding: 100px;
+		    display: none;
+		}
+	</style>	
+</head>
+
+<body>
+	
+	<div id="flip">Click </div>
+	<div id="panel">AdithyaBoinapally</div>
+</body>
+</html>
