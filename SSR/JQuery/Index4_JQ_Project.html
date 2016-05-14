@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body{
+					background: maroon;
+					margin: 0px;
+				}
+			#movie_flip,#stop{
+				background: grey;
+				border: 1px solid black;
+				}
+			#movie_panel{
+				background: grey;
+				border: 1px solid black;
+				display:none;
+				}
+		</style>
+		<title>Index4_JQ_Project</title>
+		<link rel="stylesheet" href="Layout.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#aa").click(function(){
+					$(this).hide();
+				});
+				$("#ab").dblclick(function(){
+					$(this).hide();
+				});
+				$("#ac").mouseenter(function(){
+					$(this).hide();
+				});
+				$("#ad").mouseleave(function(){
+					$(this).hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("#sa").hide();
+					});
+				$("#show").click(function(){
+					$("#sa").show(1000);
+					});
+				$("#toggle").click(function(){
+					$("#sb").toggle(1000);
+					});
+				$("#fadein").click(function(){
+					$("img").fadeIn(1000);
+					});
+				$("#fadeout").click(function(){
+					$("img").fadeOut(1000);
+					});
+				$("#fadetoggle").click(function(){
+					$("img").fadeToggle(1000);
+					});
+				$("#fadeto").click(function(){
+					$("img").fadeTo(1000,0.6);
+					});
+				$("#movie_flip").click(function(){
+					$("#movie_panel").slideToggle(5000);
+					});
+				$("#stop").click(function(){
+					$("#movie_panel").stop();
+					});
+				});
+		</script>
+	</head>
+	<body>
+		<div id="header" style="text-align:center">JQUERY EFFECTS.</div>
+		<div id="nav" style="text-align:center">Fade,Slide,Animate,Stop,Callback and Chaining</div>	
+		<div id="section">
+			<div id="article">
+				<p style="text-align:center">Events</p>
+				<p id="aa"> Click on this to disappear</p>
+				<p id="ab"> Double Click on this to disappear</p>
+				<p id="ac">Put mouse on this to disappear</p>
+				<p id="ad">Leave mouse from this to disappear(Similarly mouseUP,mouseDown,hover</p>
+				<div id="stop">
+					<p>Click here to stop sliding</p>
+				</div>
+				<div id="movie_flip">
+					<p>Click here to view movies</p>
+				</div>
+				<div id="movie_panel">
+					<a href="http://www.movierulz.to/sarrainodu-2016-dvdscr-telugu-full-movie-watch-online-free/" target="_blank"><img src="http://images4.desimartini.com/media/versions/main/movie_jsarea/2016-2/e25bd525-693b-4193-a396-96f66ff811cb_movie_jsarea.jpg" style="width:70px;height:70px;"></a>
+					<a href="http://www.movierulz.to/sardaar-gabbar-singh-2016-dvdscr-telugu-full-movie-watch-online-free/" target="_blank"><img src="https://3.bp.blogspot.com/-n2bmQGYdvf0/VdadcJCGDrI/AAAAAAAAAFA/jPkeClTvy0U/w800-h800/Untitled-33.jpg" style="width:70px;height:70px;"></a>
+					<a href="http://www.movierulz.to/oopiri-2016-dvdrip-telugu-full-movie-watch-online-free/" target="_blank"><img src="http://www.andhrawishesh.com/media/k2/items/cache/Oopiri-movie-first-look_L.jpg" style="width:70px;height:70px;"></a>
+				</div>
+				
+			</div>
+				This is section.
+
+			<div id="aside">
+				<p style="text-align:center">Effects</p>
+				<p id="sa">Click below hide button to hide and show button to show the content</p>				
+				<p id="sb">Click below Toggle button to hide/show the content</p>
+				<button id="hide">Hide</button>
+				<button id="show">Show</button>
+				<button id="toggle">Toggle</button><br><br>
+				<img src="http://2.bp.blogspot.com/-NI-CuONZ7_A/UTH9pK75qNI/AAAAAAAAHQI/89SNL-yIP-4/s1600/Kerala+Natural+Sceneries.jpg" alt="lake_view" style="width:250px;height:150px;">
+				<button id="fadein">FadeIn</button>
+				<button id="fadeout">FadeOut</button>
+				<button id="fadetoggle">Toggle</button>
+				<button id="fadeto">Opacity</button>
+			</div>
+		</div>		
+		<div id="footer" style="text-align:center">Copy Rights &copy Reserved</div>
+	</body>
+</html>

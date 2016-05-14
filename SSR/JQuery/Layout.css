@@ -1,0 +1,36 @@
+
+#header{
+	background-color: black;
+	color: white;	
+}
+#nav{
+	background-color: blue;
+	color: white;
+}
+#section{
+	background-color: grey;
+	color: white;
+	clear: both;
+	height: 600px;	
+}
+#article{
+	background-color: orange;
+	color: white;
+	width: 20%;	
+	float: left;
+	height: 600px;
+}
+#aside{
+	background-color: violet;
+	color: black;
+	width: 20%;	
+	float: right;
+	height: 600px;
+}
+#footer{
+	background-color: black;
+	color: white;
+	clear:both;
+}
+
+	
