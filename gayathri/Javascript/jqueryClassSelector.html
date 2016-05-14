@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Class Selector</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".first").css("font-family","cursive");
+			$(".second").css("font-family","sans-serif");
+			$(".third").css("font-family","fantasy");
+			$(".fourth,#11").css("font-family","papyrus"); // multiple element selectors.
+			
+		});
+	</script>
+</head>
+	<body>
+		<p class="first"><span style="color:pink;">How can a clam cram in a clean cream can?</span></p>
+		<p class="second"><span style="color:blue">Send toast to ten stouts saints ten tall tents.</span></p>
+		<p class="third"><span style="color:orange">Sheena leads,Sheila needs.</span></p>
+		<p class="fourth"><span style="color:red">Can you can a can as a canner can can a can.</span></p>
+		<p class="fifth" id="11"><span style="color:green">The thirty-three thieves thought that they thrilled the throne throughtout thursday.</span></p>
+	</body>
+</html>
